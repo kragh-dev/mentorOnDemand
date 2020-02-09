@@ -1,0 +1,105 @@
+<div class="container-fluid">
+    <p class="bold px-1 mt-3">Hello, sign up to continue</p>
+    <div class="row bg-pitchBlack row-choose-user mx-1 mb-4">
+        <div class="col-12 p-0 mb-2 mt-3">
+            <p class="bold">Choose</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 p-0">
+            <button (click)="mentorClick()" [className]="isMentor ? 'button3' : 'button2'" style="width: 30%; padding: 5px;">
+                <img src="assets/images/mentor-icon.png" width="100%">
+                <span>
+                    Mentor
+                </span>
+            </button>
+            <button (click)="userClick()" [className]="isUser ? 'ml-2 button3' : 'ml-2 button2'" style="width: 30%; padding: 5px;">
+                <img src="assets/images/user-icon.png" width="100%">
+                <span>
+                    User
+                </span>
+            </button>
+        </div>
+        <div class="col-lg-8 col-md-8 col-12 p-0">
+            <div class="heading">
+                <p class="bold">{{isMentor ? 'Mentor Registration' : ''}}</p>
+                <p class="bold">{{isUser ? 'User Registration' : ''}}</p>
+            </div>
+            <form [formGroup]="userCreationForm" (ngSubmit)="onSubmit()" novalidate *ngIf="isUser || isMentor">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group mb-4">
+                            <label class="small-text bold" for="firstName">First Name</label>
+                            <input type="text" class="form-control input-field" formControlName="firstName" id="firstName" placeholder="Enter First Name">
+                            <div class="text text-danger" *ngIf="userCreationForm.get('firstName').touched && userCreationForm.get('firstName').hasError('required')"><small>First Name is required</small></div>
+                            <div class="text text-danger" *ngIf="userCreationForm.get('firstName').dirty && userCreationForm.get('firstName').hasError('maxlength')"><small>First Name cannot exceed 20 characters</small></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group mb-4">
+                            <label class="small-text bold" for="lastName">Last Name</label>
+                            <input type="text" class="form-control input-field" formControlName="lastName" id="lastName" placeholder="Enter Last Name">
+                            <div class="text text-danger" *ngIf="userCreationForm.get('lastName').touched && userCreationForm.get('lastName').hasError('required')"><small>Last Name is required</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group mb-4">
+                            <label class="small-text bold" for="contactNumber">Contact Number</label>
+                            <input type="text" class="form-control input-field" formControlName="contactNumber" id="contactNumber" placeholder="Enter Contact Number">
+                            <div class="text text-danger" *ngIf="userCreationForm.get('contactNumber').touched && userCreationForm.get('contactNumber').hasError('required')"><small>Contact Number is required</small></div>
+                            <div class="text text-danger" *ngIf="userCreationForm.get('contactNumber').dirty && userCreationForm.get('contactNumber').hasError('maxlength')"><small>Contact Number cannot exceed 10 characters</small></div>
+                            <div class="text text-danger" *ngIf="userCreationForm.get('contactNumber').dirty && userCreationForm.get('contactNumber').hasError('pattern')"><small>Contact Number should not contain any alphabets & special characters</small></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12" *ngIf="isMentor">
+                        <div class="form-group mb-4">
+                            <label class="small-text bold" for="yearsOfExperience">Years of Experience</label>
+                            <input type="number" class="form-control input-field" formControlName="yearsOfExperience" id="yearsOfExperience" placeholder="Enter Years of Experience">
+                            <div class="text text-danger" *ngIf="userCreationForm.get('yearsOfExperience').touched && userCreationForm.get('yearsOfExperience').hasError('required')"><small>Years of Experience is required</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group mb-4">
+                            <label class="small-text bold" for="userName">Email Id</label>
+                            <input (input)="onEmailChange(userCreationForm.get('userName').value)" type="text" class="form-control input-field" formControlName="userName" id="userName" placeholder="Enter Email Id" [ngClass]="{ 'is-invalid': isEmailExist , 'is-valid': userCreationForm.get('userName').dirty && !userCreationForm.get('userName').hasError('required') && !userCreationForm.get('userName').hasError('email') && !isEmailExist }">
+                            <div class="text text-danger" *ngIf="userCreationForm.get('userName').touched && userCreationForm.get('userName').hasError('required')"><small>Email Id is required</small></div>
+                            <div class="text text-success" *ngIf="userCreationForm.get('userName').dirty && !userCreationForm.get('userName').hasError('required') && !userCreationForm.get('userName').hasError('email') && !isEmailExist"><small>You are good to go</small></div>
+                            <div class="text text-danger" *ngIf="userCreationForm.get('userName').dirty && !userCreationForm.get('userName').hasError('required') && !userCreationForm.get('userName').hasError('email') && isEmailExist"><small>Email already exist</small></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group mb-4">
+                            <label class="small-text bold" for="linkedinUrl">LinkedIn URL</label>
+                            <input type="text" class="form-control input-field" formControlName="linkedinUrl" id="linkedinUrl" placeholder="Enter LinkedIn URL">
+                            <div class="text text-danger" *ngIf="userCreationForm.get('linkedinUrl').touched && userCreationForm.get('linkedinUrl').hasError('required')"><small>LinkedIn URL is required</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group mb-4">
+                            <label class="small-text bold" for="contactNumber">Password</label>
+                            <input type="password" (input)="onPassword($event,password.value)" class="form-control input-field" formControlName="password" id="userPass" placeholder="Enter Password">
+                            <div class="text text-danger" *ngIf="userCreationForm.get('password').touched && userCreationForm.get('password').hasError('required')"><small>Password is required</small></div>
+                            <div class="text text-danger" *ngIf="userCreationForm.get('password').dirty && userCreationForm.get('password').hasError('minlength')"><small>Password length should be minimum 8 characters</small></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group mb-4">
+                            <label class="small-text bold" for="contactNumber">Confirm Password</label>
+                            <input type="password" (input)="onConfirmPassword($event)" #password class="form-control input-field" id="userConfirmPass" placeholder="Enter Password Again">
+                            <div class="text text-danger" *ngIf="passwordNotSame"><small>Passwords do not match</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="login-button">
+                    <small>Already have an account? <a [routerLink]="['/login']">Log In</a></small>
+                    <button [disabled]="(!userCreationForm.valid) || passwordNotSame || isEmailExist" type="submit" class="btn btn-orange-boxed float-right">Signup</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

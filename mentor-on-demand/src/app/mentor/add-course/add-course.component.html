@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <app-banner-one></app-banner-one>
+    <div class="row">
+        <div class="col-12">
+            <p class="bold mt-1">Add new course</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <form [formGroup]="addCourseForm" (ngSubmit)="onSubmit()" novalidate>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="small-text" for="name">Course Name</label>
+                            <input (input)="onFeeChange()" type="text" class="form-control input-field" formControlName="name" id="name" placeholder="Enter Course Name">
+                            <div class="text text-danger" *ngIf="addCourseForm.get('name').touched && addCourseForm.get('name').hasError('required')"><small class="small-text">Course Name is required</small></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="form-group">
+                            <label class="small-text" for="skillId">Skill</label>
+                            <select formControlName="skillId" id="skillId" class="form-control input-field">
+                                <option value="" class="text-dark">Select a Skill</option>
+                                <option *ngFor="let skill of skills" value="{{skill.id}}" class="text-dark">{{skill.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                        <div class="form-group">
+                            <label class="small-text" for="duration">Duration (in hours)</label>
+                            <input (input)="onFeeChange()" type="text" class="form-control input-field" formControlName="duration" id="duration" placeholder="Enter Duration">
+                            <div class="text text-danger" *ngIf="addCourseForm.get('duration').touched && addCourseForm.get('duration').hasError('required')"><small class="small-text">Duration is required</small></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="form-group">
+                            <label class="small-text" for="fees">Fee</label>
+                            <input (input)="onFeeChange()" type="number" class="form-control input-field" formControlName="fees" id="fees" placeholder="Enter Fee">
+                            <div class="text text-danger" *ngIf="addCourseForm.get('fees').touched && addCourseForm.get('fees').hasError('required')"><small class="small-text">Fee is required</small></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="form-group">
+                            <label class="small-text" for="commissionAmount">Commission Amount</label>
+                            <input (input)="onFeeChange()" type="number" class="form-control input-field" formControlName="commissionAmount" id="commissionAmount" placeholder="automatic calculation" disabled>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <a class="small-text bold" [routerLink]="['/mentorSkills']">Cancel</a>
+                        <button [disabled]="(!addCourseForm.valid)" type="submit" class="btn btn-orange-boxed float-right">Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

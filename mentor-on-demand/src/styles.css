@@ -1,0 +1,320 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+
+body{
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 0;
+    color: white;
+	background-color: black;
+}
+
+.full-body{
+    width: 100%;
+}
+
+.space-div{
+    width: auto;
+    height: auto;
+    max-width: 1300px !important;
+    margin: 0 auto;
+    margin-bottom: 0;
+}
+
+.header-color{
+    background-color: orange;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.bg-pitchBlack{
+    background-color: black;
+}
+
+.input-field{
+	border-radius: 0;
+	border-bottom: 1;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-color: white;
+	height: 30px;
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	/* margin-bottom: 10px; */
+	color: white;
+}
+
+.input-field::placeholder{
+	color: gray;
+}
+
+.input-field:focus{
+	border-radius: 0;
+	border-bottom: 1;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-color: orange;
+	height: 30px;
+	background-color: transparent;
+	color: white;
+	box-shadow: black;
+	/* margin-bottom: 10px; */
+}
+
+.input-field:-webkit-autofill,
+.input-field:-webkit-autofill:hover,
+.input-field:-webkit-autofill:focus,
+.input-field:-webkit-autofill:active{
+	background-color: transparent !important;
+}
+
+
+/* read-only-tag
+.input-field[readonly="readonly"], .input-field[readOnly]{
+	background-color: transparent;
+}
+*/
+
+.input-field:disabled{
+	background-color: transparent;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+}
+
+.technology-card{
+    background-color: #191919;
+    color: white;
+    border-radius: 0;
+    border: 0;
+}
+
+.course-card{
+	background-color: #191919;
+    color: white;
+    border-radius: 0;
+    border: 0;
+}
+
+.technology-card:hover{
+    border-width: 9px;
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	border-bottom: 1;
+	border-color: orange;
+}
+
+.button2{
+	background-color: #333333;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    transition: all 0.5s;
+	cursor: pointer;
+	width: 100px;
+	border-radius: 0;
+	padding: 0;
+}
+
+.button2 span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button2 span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button2:hover span {
+	padding-right: 25px;
+}
+
+.button2:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.button21{
+	background-color: transparent;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 20px;
+	transition: all 0.5s;
+	cursor: pointer;
+	width: 19%;
+	border-radius: 0;
+}
+
+.button21 span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button21 span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button21:hover span {
+	padding-right: 25px;
+}
+
+.button21:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.button3{
+	background-color: black;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+	border-width: 5px;
+	border-bottom: 1;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	width: 100px;
+	border-color: orange;
+	border-radius: 0;
+	padding: 0;
+}
+
+.button3 span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button3 span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button3:hover span {
+	padding-right: 25px;
+}
+
+.button3:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.button31{
+	background-color: transparent;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 20px;
+	transition: all 0.5s;
+	cursor: pointer;
+	border-width: 5px;
+	border-bottom: 1;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	width: 20%;
+	border-color: orange;
+}
+
+.button31 span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button31 span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button31:hover span {
+	padding-right: 25px;
+}
+
+.button31:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.small-text{
+	font-size: small;
+}
+
+.large-text{
+	font-size: large;
+}
+
+.xlarge-text{
+	font-size: x-large;
+}
+
+.btn-orange-boxed{
+	background-color: transparent;
+	border-color: orange;
+	color: white;
+	border-radius: 0;
+	border-top: 0;
+	border-bottom: 1;
+	border-left: 1;
+	border-right: 0;
+	margin: 0;
+	padding: 5px;
+}
+
+.btn-orange-boxed:hover{
+	background-color: orange;
+	border-color: orange;
+	color: white;
+	border-radius: 0;
+	border-top: 1;
+	border-bottom: 1;
+	border-left: 1;
+	border-right: 1;
+	margin: 0;
+	padding: 5px;
+}
+
+.fee-price-gray{
+	color: gray;
+	font-size: smaller;
+}
+
+.card-inline{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

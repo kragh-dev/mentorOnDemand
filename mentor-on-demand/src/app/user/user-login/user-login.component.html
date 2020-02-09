@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <p class="bold px-1 mt-3">Welcome Back, Log in to continue</p>
+    <div class="row bg-pitchBlack row-choose-user mx-1 mb-4">
+        <div class="col-12 p-0 mb-2 mt-3">
+            <p class="bold">Choose</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 p-0">
+            <button (click)="adminClick()" [className]="isAdmin ? 'button3' : 'button2'" style="width: 30%; padding: 5px;">
+                <img src="assets/images/admin-icon.png" width="100%">
+                <span>
+                    Admin
+                </span>
+            </button>
+            <button (click)="mentorClick()" [className]="isMentor ? 'ml-2 button3' : 'ml-2 button2'" style="width: 30%; padding: 5px;">
+                <img src="assets/images/mentor-icon.png" width="100%">
+                <span>
+                    Mentor
+                </span>
+            </button>
+            <button (click)="userClick()" [className]="isUser ? 'ml-2 button3' : 'ml-2 button2'" style="width: 30%; padding: 5px;">
+                <img src="assets/images/user-icon.png" width="100%">
+                <span>
+                    User
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class="row bg-pitchBlack row-choose-user mx-1">
+        <div class="col-12 p-0 mb-2 heading">
+            <p class="bold">{{isAdmin ? 'Admin Login' : ''}}</p>
+            <p class="bold">{{isMentor ? 'Mentor Login' : ''}}</p>
+            <p class="bold">{{isUser ? 'User Login' : ''}}</p>
+        </div>
+        <div *ngIf="isAdmin || isMentor || isUser" class="col-lg-4 col-md-4 col-12 p-0">
+            <p *ngIf="isNotValid" class="text text-danger"><b>{{message}}<br><small><b>{{rejectMessage}}</b></small></b></p>
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                <div class="form-group mb-4">
+                    <label class="small-text bold" for="username">Username</label>
+                    <input id="username" type="text" placeholder="Enter Username" formControlName="username" class="form-control input-field mb-2" [ngClass]="{ 'is-invalid': submitted && formControls.username.errors }" />
+                    <div *ngIf="submitted && formControls.emailId.errors" class="invalid-feedback">
+                        <div *ngIf="formControls.username.errors.required">Username - Email is required</div>
+                        <div *ngIf="formControls.username.errors.email">Username - Email must be a valid email address</div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="small-text bold" for="passwordInput">Password</label>
+                    <input id="passwordInput" type="password" placeholder="Enter Password" formControlName="password" class="form-control input-field mb-2" [ngClass]="{ 'is-invalid': submitted && formControls.password.errors }" />
+                    <div *ngIf="submitted && formControls.password.errors" class="invalid-feedback">
+                        <div *ngIf="formControls.password.errors.required">Password is required</div>
+                        <div *ngIf="formControls.password.errors.minlength">Password must be at least 8 characters</div>
+                    </div>
+                  </div>
+              <div class="form-group form-check">
+                <!--<label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                </label>-->
+              </div>
+              <small>Don't have an account? <a [routerLink]="['/signup']">Sign Up</a></small>
+              <button type="submit" class="btn btn-danger btn-orange-boxed float-right my-4">Login</button>
+            </form>
+        </div>
+    </div>
+</div>

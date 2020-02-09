@@ -1,0 +1,19 @@
+.container-login-two{
+    border-radius: 0;
+    height: 54rem;
+}
+
+.container-login-one{
+    border-radius: 0;
+    height: 54rem;
+    background-color: teal;
+}
+
+.row-choose-user{
+    display: flex;
+    align-items: center;
+}
+
+.heading{
+    display: flex;
+}

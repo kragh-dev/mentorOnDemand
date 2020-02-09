@@ -1,0 +1,64 @@
+<div class="container-fluid px-3 mt-4">
+    <div class="row">
+        <div class="col-12">
+            <p class="bold" style="font-size: x-large;">My Trainings</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-12 mb-2" *ngFor="let training of trainings | async">
+            <div class="card course-card">
+                <div class="container-fluid px-3 pt-3 pb-2">
+                    <b class="card-title card-heading">Course Name : {{training.courseName}}</b>
+                </div>
+                <div class="container-fluid px-3 pb-2 text-justify">
+                    <small class="bold">Skill : {{training.skillName}}</small>
+                </div>
+                <div class="container-fluid px-3 pb-2 text-justify">
+                    <small class="bold">Mentor : {{training.mentorName}}</small>
+                </div>
+                <div class="container-fluid px-3 pb-3 text-justify" *ngIf="training.approved && training.paymentStatus">
+                    <small class="bold">Progress : {{training.progress}}%</small>
+                </div>
+                <div class="container-fluid px-3 pb-3 text-justify" *ngIf="training.approved && training.paymentStatus">
+                    <div class="progress" style="height: 5px" *ngIf="training.progress == 0">
+                        <div class="progress-bar" style="width:0%">0%</div>
+                    </div>
+                    <div class="progress" style="height: 5px" *ngIf="training.progress == 25">
+                        <div class="progress-bar" style="width:25%; background-color: yellow;"></div>
+                    </div>
+                    <div class="progress" style="height: 5px" *ngIf="training.progress == 50">
+                        <div class="progress-bar" style="width:50%; background-color: yellowgreen;"></div>
+                    </div>
+                    <div class="progress" style="height: 5px" *ngIf="training.progress == 75">
+                        <div class="progress-bar" style="width:75%; background-color: rgb(62, 216, 24);"></div>
+                    </div>
+                    <div class="progress" style="height: 5px" *ngIf="training.progress == 100">
+                        <div class="progress-bar" style="width:100%; background-color: green;"></div>
+                    </div>
+                </div>
+                <div class="container-fluid px-3 pb-4 text-justify" *ngIf="training.progress == 0">
+                    <button (click)="onTraining(training.id)" class="btn btn-orange-boxed">Start</button>
+                </div>
+                <div class="container-fluid px-3 pb-4 text-justify" *ngIf="training.progress != 0 && training.progress != 100">
+                    <button (click)="onTraining(training.id)" class="btn btn-orange-boxed">Continue</button>
+                </div>
+                <div class="container-fluid px-3 pb-2 text-justify" *ngIf="!training.paymentStatus && !training.rejected">
+                    <small class="bold">Amount : {{training.fees + training.commissionAmount | currency:'INR'}}</small>
+                </div>
+                <div class="container-fluid px-3 pb-2 text-justify" *ngIf="training.approved && !training.paymentStatus">
+                    <small class="bold text-success">Approved</small>
+                </div>
+                <div class="container-fluid px-3 pb-3 text-justify" *ngIf="!training.approved && !training.rejected">
+                    <small class="bold text-warning">Pending for approval</small>
+                </div>
+                <div class="container-fluid px-3 pb-4 pt-2 text-justify" *ngIf="!training.paymentStatus && training.approved">
+                    <button (click)="onPay(training.id,training.userId,(training.fees + training.commissionAmount))" class="btn btn-orange-boxed">Pay</button>
+                </div>
+                <div class="container-fluid px-3 pb-4 text-justify" *ngIf="training.rejected">
+                    <small class="bold text-danger">Rejected</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,55 @@
+<div class="bg-pitchBlack">
+    <nav class="navbar navbar-expand-lg navbar-dark space-div fixed-top bg-pitchBlack">
+        <a class="navbar-brand bold"><i class="material-icons mr-2" style="color: orange;">emoji_people</i>MOD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <!-- <li *ngIf="getUser() && isAdmin()" class="nav-item">
+                    <a class="nav-link" [routerLink]="['/dashboard']">Dashboard</a>
+                </li> -->
+                <li class="nav-item" *ngIf="getUser() && getRole()=='mentor'">
+                    <a class="nav-link" [routerLink]="['/mentorSkills']">Skills</a>
+                </li>
+                <li class="nav-item" *ngIf="getUser() && getRole()=='mentor'">
+                    <a class="nav-link" [routerLink]="['/mentors']">Courses</a>
+                </li>
+                <li *ngIf="getUser() && getRole()=='user'" class="nav-item">
+                    <a class="nav-link" [routerLink]="['/userTrainings',getUser().id]">My Trainings</a>
+                </li>
+                <li *ngIf="getUser() && getRole()=='mentor'" class="nav-item">
+                    <a class="nav-link" [routerLink]="['/mentorTrainings',getUser().id]">Trainings</a>
+                </li>
+                <li *ngIf="getUser() && getRole()=='admin'" class="nav-item">
+                    <a class="nav-link" [routerLink]="['/profile',getUser().emailId]">Skills</a>
+                </li>
+                <!-- <li *ngIf="getUser() && isAdmin()" class="nav-item">
+                    <a class="nav-link" [routerLink]="['/registrationRequests']">Registrations</a>
+                </li>
+                <li *ngIf="getUser() && !isAdmin()" class="nav-item">
+                    <a class="nav-link" [routerLink]="['/reservations']">Reservations</a>
+                </li>-->
+                <li *ngIf="getUser() && getRole()=='admin'" class="nav-item">
+                    <a class="nav-link nav-account" [routerLink]="['/profile',getUser().emailId]"><i class="material-icons nav-account-icon">perm_identity</i>{{getUser().firstName}} - Admin</a>
+                </li>
+                <li *ngIf="getUser() && getRole()=='mentor'" class="nav-item">
+                    <a class="nav-link nav-account" [routerLink]="['/profile',getUser().emailId]"><i class="material-icons nav-account-icon">perm_identity</i>{{getUser().firstName}} - Mentor</a>
+                </li>
+                <li *ngIf="getUser() && getRole()=='user'" class="nav-item">
+                    <a class="nav-link nav-account" [routerLink]="['/profile',getUser().emailId]"><i class="material-icons nav-account-icon">perm_identity</i>{{getUser().firstName}}</a>
+                </li>
+                <li *ngIf="!getUser()" class="nav-item">
+                    <a class="nav-link" [routerLink]="['/login']">Login</a>
+                </li>
+                <li *ngIf="!getUser()" class="nav-item">
+                    <a class="nav-link" [routerLink]="['/signup']">Signup</a>
+                </li>
+                <li class="nav-item" *ngIf="getUser()">
+                    <a class="nav-link" [routerLink]="" (click)="onLogout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="container-fluid mt-1 py-4"></div>

@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <app-banner-one></app-banner-one>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-12 mb-4">
+            <label class="bold" for="vehicleNumber">Search for technology</label>
+            <input type="text" (input)="onSearch($event)" class="form-control input-field" id="technology" placeholder="Enter Technology">
+        </div>
+        <div class="col-lg-9 col-md-9 col-12 mb-4">
+            <p class="bold">Technologies</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-6 mb-3" *ngFor="let course of courses">
+                    <div class="card technology-card">
+                        <img class="card-img-top" src="assets/images/{{course.skillName}}.jpg" width="100%">
+                        <div class="container-fluid pb-1 pt-3"><p class="bold">{{course.name}}</p></div>
+                        <div class="container-fluid pb-1 card-inline"><p class="bold">{{course.mentorName}} - {{course.mentorYearsOfExp}}<small> years of experience</small></p></div>
+                        <div class="container-fluid pb-1 card-inline"><p class="bold">{{course.skillName}}</p><p class="bold">{{course.duration}}<small> hours</small> </p></div>
+                        <div class="container-fluid pb-3 card-inline"><p class="bold fee-price-gray">{{course.fees + course.commissionAmount | currency:'INR'}}</p><button (click)="onPropose(course.id)" class="btn btn-orange-boxed">Propose</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

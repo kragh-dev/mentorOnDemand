@@ -1,0 +1,6 @@
+.jumbotron-banner-one{
+    background: url('src/assets/images/programming-one.png');
+    border-radius: 0;
+    height: 30rem;
+    background-size: cover;
+}

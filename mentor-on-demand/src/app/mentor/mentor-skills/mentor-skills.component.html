@@ -1,0 +1,14 @@
+<div class="row mx-1">
+    <div class="col-12 mb-4">
+        <p class="bold">My Courses</p>
+        <button (click)="onAdd()" class="btn btn-orange-boxed px-3 float-right">+</button>
+    </div>
+    <div class="col-3" *ngFor="let course of myCourses">
+        <div class="card technology-card">
+            <img src="assets/images/{{course.skillName}}.jpg" width="100%">
+            <div class="container-fluid pb-1 pt-3"><p class="bold">{{course.name}}</p></div>
+            <div class="container-fluid pb-1 card-inline"><p class="bold">{{course.skillName}}</p><p class="bold">{{course.duration}}<small> hours</small> </p></div>
+            <div class="container-fluid pb-3 card-inline"><p class="bold fee-price-gray">{{course.fees | currency:'INR'}}</p><button (click)="onEdit(course.id)" class="btn btn-orange-boxed">Edit</button></div>
+        </div>
+    </div>
+</div>
