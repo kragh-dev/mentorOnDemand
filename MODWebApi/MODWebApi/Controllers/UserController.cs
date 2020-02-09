@@ -71,9 +71,10 @@ namespace MODWebApi.Controllers
         }
         [Route("payForTraining/{id}/{userId}/{amount}")]
         [HttpPut("{id}/{userId}/{amount}")]
-        public IActionResult PayForTraining(long id, long userId, double amount)
+        public IActionResult PayForTraining(long id, long userId, long amount)
         {
             Payment payment = new Payment();
+            long adminId = 2;
             payment.UserId = userId;
             payment.PaymentMethod = "Online";
             payment.AmountPaid = amount;
@@ -81,9 +82,12 @@ namespace MODWebApi.Controllers
             modcontext.Payment.Add(payment);
             modcontext.SaveChanges();
             var training = modcontext.Training.Where(t => t.Id == id).FirstOrDefault();
+            var wallet = modcontext.Wallet.Where(w => w.UserId == adminId).FirstOrDefault();
             training.AmountPaid = amount;
+            wallet.Balance = wallet.Balance + amount;
             training.PaymentStatus = true;
             training.PaymentId = payment.Id;
+            modcontext.Wallet.Update(wallet);
             modcontext.Training.Update(training);
             modcontext.SaveChanges();
             return Ok(new { status = "Payment Successful", payment = payment });
@@ -92,7 +96,7 @@ namespace MODWebApi.Controllers
         [HttpGet("{id}")]
         public IActionResult GetTraining(long id)
         {
-            return Ok(modcontext.Training.Where(t => t.Id == id).FirstOrDefault());
+            return Ok(modcontext.Training.Where(t => t.Id == id));
         }
     }
 }

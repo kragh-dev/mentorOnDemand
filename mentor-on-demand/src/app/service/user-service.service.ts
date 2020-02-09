@@ -43,4 +43,11 @@ export class UserServiceService {
     let options = { headers: header }
     return this.http.put(this.baseUrl+"user/payForTraining/"+body,options)
   }
+  completeTraining(id, progress)
+  {
+    let body = id+"/"+progress
+    let header = new HttpHeaders({ 'Content-Type': 'application/json', 'responseType':'text' })
+    let options = { headers: header }
+    return this.http.put(this.baseUrl+"userTwo/completeTraining/"+body,options)
+  }
 }

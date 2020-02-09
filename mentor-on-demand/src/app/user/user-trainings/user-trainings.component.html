@@ -36,7 +36,7 @@
                         <div class="progress-bar" style="width:100%; background-color: green;"></div>
                     </div>
                 </div>
-                <div class="container-fluid px-3 pb-4 text-justify" *ngIf="training.progress == 0">
+                <div class="container-fluid px-3 pb-4 text-justify" *ngIf="training.progress == 0 && training.paymentStatus">
                     <button (click)="onTraining(training.id)" class="btn btn-orange-boxed">Start</button>
                 </div>
                 <div class="container-fluid px-3 pb-4 text-justify" *ngIf="training.progress != 0 && training.progress != 100">

@@ -26,7 +26,7 @@ namespace MODWebApi.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("server=J-A-R-V-I-S;database=modDB;trusted_connection=yes");
+                optionsBuilder.UseSqlServer("server=PCIN480258;database=modDB;trusted_connection=yes");
             }
         }
 

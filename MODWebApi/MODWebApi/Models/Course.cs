@@ -13,7 +13,7 @@ namespace MODWebApi.Models
         public long MentorId { get; set; }
         public string MentorName { get; set; }
         public int MentorYearsOfExp { get; set; }
-        public double Fees { get; set; }
+        public long Fees { get; set; }
         public double CommissionAmount { get; set; }
         public int Rating { get; set; }
         public bool Approved { get; set; }

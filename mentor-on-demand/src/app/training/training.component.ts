@@ -10,17 +10,21 @@ import { ActivatedRoute } from '@angular/router';
 export class TrainingComponent implements OnInit {
 
   trainingId
-  training
+  trainings
 
   constructor(private userService: UserServiceService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.trainingId = this.activatedRoute.snapshot.params['id'] as number
-    this.userService.getTraining(this.trainingId).subscribe(
+    this.trainings = this.userService.getTraining(this.trainingId)
+  }
+
+  onTraining(id, progress)
+  {
+    this.userService.completeTraining(id,progress).subscribe(
       data => {
-        this.training = data
+        this.trainings = this.userService.getTraining(this.trainingId)
       }
     )
   }
-
 }
