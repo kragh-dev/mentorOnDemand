@@ -9,11 +9,14 @@
                 <!-- <li *ngIf="getUser() && isAdmin()" class="nav-item">
                     <a class="nav-link" [routerLink]="['/dashboard']">Dashboard</a>
                 </li> -->
-                <li class="nav-item" *ngIf="getUser() && getRole()=='mentor'">
-                    <a class="nav-link" [routerLink]="['/mentorSkills']">Skills</a>
+                <li class="nav-item" *ngIf="!getUser()">
+                    <a class="nav-link" [routerLink]="['/mentors']">Courses</a>
+                </li>
+                <li class="nav-item" *ngIf="getUser() && getRole()=='user'">
+                    <a class="nav-link" [routerLink]="['/mentors']">Courses</a>
                 </li>
                 <li class="nav-item" *ngIf="getUser() && getRole()=='mentor'">
-                    <a class="nav-link" [routerLink]="['/mentors']">Courses</a>
+                    <a class="nav-link" [routerLink]="['/mentorSkills']">Courses</a>
                 </li>
                 <li *ngIf="getUser() && getRole()=='user'" class="nav-item">
                     <a class="nav-link" [routerLink]="['/userTrainings',getUser().id]">My Trainings</a>
@@ -21,23 +24,24 @@
                 <li *ngIf="getUser() && getRole()=='mentor'" class="nav-item">
                     <a class="nav-link" [routerLink]="['/mentorTrainings',getUser().id]">Trainings</a>
                 </li>
-                <li *ngIf="getUser() && getRole()=='admin'" class="nav-item">
+                <!-- <li *ngIf="getUser() && getRole()=='admin'" class="nav-item">
                     <a class="nav-link" [routerLink]="['/profile',getUser().emailId]">Skills</a>
                 </li>
-                <!-- <li *ngIf="getUser() && isAdmin()" class="nav-item">
+                <li *ngIf="getUser() && isAdmin()" class="nav-item">
                     <a class="nav-link" [routerLink]="['/registrationRequests']">Registrations</a>
                 </li>
                 <li *ngIf="getUser() && !isAdmin()" class="nav-item">
                     <a class="nav-link" [routerLink]="['/reservations']">Reservations</a>
+                    [routerLink]="['/profile',getUser().emailId]"
                 </li>-->
                 <li *ngIf="getUser() && getRole()=='admin'" class="nav-item">
-                    <a class="nav-link nav-account" [routerLink]="['/profile',getUser().emailId]"><i class="material-icons nav-account-icon">perm_identity</i>{{getUser().firstName}} - Admin</a>
+                    <a aria-disabled="true" class="nav-link nav-account"><i class="material-icons nav-account-icon">perm_identity</i>{{getUser().firstName}} - Admin</a>
                 </li>
                 <li *ngIf="getUser() && getRole()=='mentor'" class="nav-item">
-                    <a class="nav-link nav-account" [routerLink]="['/profile',getUser().emailId]"><i class="material-icons nav-account-icon">perm_identity</i>{{getUser().firstName}} - Mentor</a>
+                    <a aria-disabled="true" class="nav-link nav-account"><i class="material-icons nav-account-icon">perm_identity</i>{{getUser().firstName}} - Mentor</a>
                 </li>
                 <li *ngIf="getUser() && getRole()=='user'" class="nav-item">
-                    <a class="nav-link nav-account" [routerLink]="['/profile',getUser().emailId]"><i class="material-icons nav-account-icon">perm_identity</i>{{getUser().firstName}}</a>
+                    <a aria-disabled="true" class="nav-link nav-account"><i class="material-icons nav-account-icon">perm_identity</i>{{getUser().firstName}}</a>
                 </li>
                 <li *ngIf="!getUser()" class="nav-item">
                     <a class="nav-link" [routerLink]="['/login']">Login</a>

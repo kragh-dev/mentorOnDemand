@@ -66,11 +66,21 @@ export class UserLoginComponent implements OnInit {
         console.log(data)
         if(data["status"] == "Valid")
         {
-          console.log("Login Successful")
           this.authService.role = data["user"].role
           this.authService.loggedInUser = data["user"]
-          console.log(this.authService.loggedInUser)
-          this.router.navigateByUrl("/mentors")
+          if(this.authService.role == "mentor")
+          {
+            this.router.navigateByUrl("/mentorSkills")
+          }
+          else if(this.authService.role == "user")
+          {
+            this.router.navigateByUrl("/mentors")
+          }
+          else if(this.authService.role == "admin")
+          {
+            alert("Admin UI view under construction - optional")
+            this.authService.onLogout()
+          }
         }
       }
     )

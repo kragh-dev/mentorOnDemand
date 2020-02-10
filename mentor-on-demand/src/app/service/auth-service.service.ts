@@ -9,7 +9,7 @@ export class AuthServiceService {
 
   loggedInUser
   role: string
-  baseUrl = 'http://localhost:5000/api/'
+  baseUrl = 'http://localhost:1477/api/'
   constructor(private http: HttpClient) { }
 
   authenticate(credentials:any)
