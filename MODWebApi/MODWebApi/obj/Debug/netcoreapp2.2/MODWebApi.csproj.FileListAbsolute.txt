@@ -25,9 +25,6 @@ C:\Users\kaart\Works\mentor-on-demand\MODWebApi\MODWebApi\obj\Debug\netcoreapp2.
 C:\Users\kaart\Works\mentor-on-demand\MODWebApi\MODWebApi\obj\Debug\netcoreapp2.2\MODWebApi.RazorTargetAssemblyInfo.cache
 C:\Users\kaart\Works\mentor-on-demand\MODWebApi\MODWebApi\obj\Debug\netcoreapp2.2\MODWebApi.dll
 C:\Users\kaart\Works\mentor-on-demand\MODWebApi\MODWebApi\obj\Debug\netcoreapp2.2\MODWebApi.pdb
-C:\Users\kaart\Works\mentor-on-demand\MODWebApi\MODWebApi\bin\Debug\netcoreapp2.2\appsettings.Development.json
-C:\Users\kaart\Works\mentor-on-demand\MODWebApi\MODWebApi\bin\Debug\netcoreapp2.2\appsettings.json
-C:\Users\kaart\Works\mentor-on-demand\MODWebApi\MODWebApi\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
 C:\Users\808002\Desktop\kaarthik\mentorOnDemand\MODWebApi\MODWebApi\bin\Debug\netcoreapp2.2\MODWebApi.deps.json
 C:\Users\808002\Desktop\kaarthik\mentorOnDemand\MODWebApi\MODWebApi\bin\Debug\netcoreapp2.2\MODWebApi.runtimeconfig.json
 C:\Users\808002\Desktop\kaarthik\mentorOnDemand\MODWebApi\MODWebApi\bin\Debug\netcoreapp2.2\MODWebApi.runtimeconfig.dev.json
@@ -42,3 +39,4 @@ C:\Users\808002\Desktop\kaarthik\mentorOnDemand\MODWebApi\MODWebApi\obj\Debug\ne
 C:\Users\808002\Desktop\kaarthik\mentorOnDemand\MODWebApi\MODWebApi\obj\Debug\netcoreapp2.2\MODWebApi.RazorTargetAssemblyInfo.cache
 C:\Users\808002\Desktop\kaarthik\mentorOnDemand\MODWebApi\MODWebApi\obj\Debug\netcoreapp2.2\MODWebApi.dll
 C:\Users\808002\Desktop\kaarthik\mentorOnDemand\MODWebApi\MODWebApi\obj\Debug\netcoreapp2.2\MODWebApi.pdb
+C:\Users\kaart\Works\mentor-on-demand\MODWebApi\MODWebApi\obj\Debug\netcoreapp2.2\MODWebApi.csproj.CoreCompileInputs.cache

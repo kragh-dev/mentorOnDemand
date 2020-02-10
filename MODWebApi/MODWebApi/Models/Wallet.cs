@@ -7,6 +7,6 @@ namespace MODWebApi.Models
     {
         public long Id { get; set; }
         public long UserId { get; set; }
-        public long Balance { get; set; }
+        public double Balance { get; set; }
     }
 }

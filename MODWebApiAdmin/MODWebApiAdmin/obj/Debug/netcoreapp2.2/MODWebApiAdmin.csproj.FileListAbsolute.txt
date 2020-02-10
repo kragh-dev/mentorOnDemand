@@ -1,0 +1,14 @@
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAdmin\MODWebApiAdmin\bin\Debug\netcoreapp2.2\MODWebApiAdmin.deps.json
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAdmin\MODWebApiAdmin\bin\Debug\netcoreapp2.2\MODWebApiAdmin.runtimeconfig.json
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAdmin\MODWebApiAdmin\bin\Debug\netcoreapp2.2\MODWebApiAdmin.runtimeconfig.dev.json
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAdmin\MODWebApiAdmin\bin\Debug\netcoreapp2.2\MODWebApiAdmin.dll
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAdmin\MODWebApiAdmin\obj\Debug\netcoreapp2.2\MODWebApiAdmin.csprojAssemblyReference.cache
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAdmin\MODWebApiAdmin\obj\Debug\netcoreapp2.2\MODWebApiAdmin.csproj.CoreCompileInputs.cache
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAdmin\MODWebApiAdmin\obj\Debug\netcoreapp2.2\MODWebApiAdmin.RazorAssemblyInfo.cache
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAdmin\MODWebApiAdmin\obj\Debug\netcoreapp2.2\MODWebApiAdmin.RazorAssemblyInfo.cs
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAdmin\MODWebApiAdmin\obj\Debug\netcoreapp2.2\MODWebApiAdmin.AssemblyInfoInputs.cache
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAdmin\MODWebApiAdmin\obj\Debug\netcoreapp2.2\MODWebApiAdmin.AssemblyInfo.cs
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAdmin\MODWebApiAdmin\obj\Debug\netcoreapp2.2\MODWebApiAdmin.RazorTargetAssemblyInfo.cache
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAdmin\MODWebApiAdmin\bin\Debug\netcoreapp2.2\MODWebApiAdmin.pdb
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAdmin\MODWebApiAdmin\obj\Debug\netcoreapp2.2\MODWebApiAdmin.dll
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAdmin\MODWebApiAdmin\obj\Debug\netcoreapp2.2\MODWebApiAdmin.pdb

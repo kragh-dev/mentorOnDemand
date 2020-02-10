@@ -1,0 +1,11 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1581287861831,250,HTTP Request,200,OK,Thread Group 1-1,text,true,,1001,135,1,1,https://localhost:44301/api/user/getCourses,234,0,99
+1581287862084,60,HTTP Request,200,OK,Thread Group 1-1,text,true,,1001,135,1,1,https://localhost:44301/api/user/getCourses,44,0,0
+1581287862145,259,HTTP Request,200,OK,Thread Group 1-1,text,true,,1001,135,1,1,https://localhost:44301/api/user/getCourses,49,0,0
+1581287862405,267,HTTP Request,200,OK,Thread Group 1-1,text,true,,1001,135,1,1,https://localhost:44301/api/user/getCourses,226,0,0
+1581287862673,381,HTTP Request,200,OK,Thread Group 1-1,text,true,,1001,135,1,1,https://localhost:44301/api/user/getCourses,266,0,0
+1581287863054,137,HTTP Request,200,OK,Thread Group 1-1,text,true,,1001,135,1,1,https://localhost:44301/api/user/getCourses,116,0,0
+1581287863192,146,HTTP Request,200,OK,Thread Group 1-1,text,true,,1001,135,1,1,https://localhost:44301/api/user/getCourses,117,0,0
+1581287863339,96,HTTP Request,200,OK,Thread Group 1-1,text,true,,1001,135,1,1,https://localhost:44301/api/user/getCourses,84,0,0
+1581287863435,99,HTTP Request,200,OK,Thread Group 1-1,text,true,,1001,135,1,1,https://localhost:44301/api/user/getCourses,79,0,0
+1581287863534,125,HTTP Request,200,OK,Thread Group 1-1,text,true,,1001,135,1,1,https://localhost:44301/api/user/getCourses,109,0,0

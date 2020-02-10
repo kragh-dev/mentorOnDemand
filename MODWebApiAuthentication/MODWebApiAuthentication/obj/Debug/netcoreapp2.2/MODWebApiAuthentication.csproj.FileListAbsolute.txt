@@ -1,0 +1,16 @@
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\obj\Debug\netcoreapp2.2\MODWebApiAuthentication.AssemblyInfoInputs.cache
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\obj\Debug\netcoreapp2.2\MODWebApiAuthentication.AssemblyInfo.cs
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\bin\Debug\netcoreapp2.2\MODWebApiAuthentication.deps.json
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\bin\Debug\netcoreapp2.2\MODWebApiAuthentication.runtimeconfig.json
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\bin\Debug\netcoreapp2.2\MODWebApiAuthentication.runtimeconfig.dev.json
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\bin\Debug\netcoreapp2.2\MODWebApiAuthentication.dll
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\bin\Debug\netcoreapp2.2\MODWebApiAuthentication.pdb
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\obj\Debug\netcoreapp2.2\MODWebApiAuthentication.csprojAssemblyReference.cache
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\obj\Debug\netcoreapp2.2\MODWebApiAuthentication.RazorAssemblyInfo.cache
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\obj\Debug\netcoreapp2.2\MODWebApiAuthentication.RazorAssemblyInfo.cs
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\obj\Debug\netcoreapp2.2\MODWebApiAuthentication.RazorTargetAssemblyInfo.cache
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\obj\Debug\netcoreapp2.2\MODWebApiAuthentication.dll
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\obj\Debug\netcoreapp2.2\MODWebApiAuthentication.pdb
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiAuthentication\MODWebApiAuthentication\bin\Debug\netcoreapp2.2\Properties\launchSettings.json

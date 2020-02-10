@@ -27,8 +27,8 @@ namespace MODWebApi.Models
         public int Rating { get; set; }
         public bool PaymentStatus { get; set; }
         public long? PaymentId { get; set; }
-        public long? AmountPaid { get; set; }
-        public long Fees { get; set; }
+        public double? AmountPaid { get; set; }
+        public double Fees { get; set; }
         public double CommissionAmount { get; set; }
     }
 }

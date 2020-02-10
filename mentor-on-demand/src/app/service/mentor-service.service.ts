@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class MentorServiceService {
 
   skills
-  baseUrl = 'http://localhost:5000/api/'
+  baseUrl = 'http://localhost:7905/api/'
   constructor(private http: HttpClient) { }
 
   getSkills()

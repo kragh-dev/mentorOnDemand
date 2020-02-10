@@ -1,0 +1,16 @@
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\obj\Debug\netcoreapp2.2\MODWebApiUser.AssemblyInfoInputs.cache
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\obj\Debug\netcoreapp2.2\MODWebApiUser.AssemblyInfo.cs
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\bin\Debug\netcoreapp2.2\MODWebApiUser.deps.json
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\bin\Debug\netcoreapp2.2\MODWebApiUser.runtimeconfig.json
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\bin\Debug\netcoreapp2.2\MODWebApiUser.runtimeconfig.dev.json
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\bin\Debug\netcoreapp2.2\MODWebApiUser.dll
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\bin\Debug\netcoreapp2.2\MODWebApiUser.pdb
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\obj\Debug\netcoreapp2.2\MODWebApiUser.csprojAssemblyReference.cache
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\obj\Debug\netcoreapp2.2\MODWebApiUser.RazorAssemblyInfo.cache
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\obj\Debug\netcoreapp2.2\MODWebApiUser.RazorAssemblyInfo.cs
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\obj\Debug\netcoreapp2.2\MODWebApiUser.RazorTargetAssemblyInfo.cache
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\obj\Debug\netcoreapp2.2\MODWebApiUser.dll
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\obj\Debug\netcoreapp2.2\MODWebApiUser.pdb
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\kaart\Works\mentor-on-demand\MODWebApiUser\MODWebApiUser\bin\Debug\netcoreapp2.2\Properties\launchSettings.json

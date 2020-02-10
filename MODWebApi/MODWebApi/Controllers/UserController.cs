@@ -71,10 +71,10 @@ namespace MODWebApi.Controllers
         }
         [Route("payForTraining/{id}/{userId}/{amount}")]
         [HttpPut("{id}/{userId}/{amount}")]
-        public IActionResult PayForTraining(long id, long userId, long amount)
+        public IActionResult PayForTraining(long id, long userId, double amount)
         {
             Payment payment = new Payment();
-            long adminId = 2;
+            long adminId = 1;
             payment.UserId = userId;
             payment.PaymentMethod = "Online";
             payment.AmountPaid = amount;
